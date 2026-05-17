@@ -1,0 +1,257 @@
+:root {
+  --dark-blue: #102B53;
+  --mid-blue: #50698D;
+  --lavender: #CEB5D4;
+  --light-blue: #4E7AB1;
+  --sky-blue: #7D9FC0;
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #dbeafc;
+    color: #102B53;
+    line-height: 1.6;
+    padding-top: 90px; /* Space for fixed navbar */
+}
+
+/* Fixed Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #102B53;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 60px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #CEB5D4;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #7D9FC0;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 6px 12px;
+    border-radius: 30px;
+    border: 1px solid #50698D;
+    background-color: #fff;
+    margin-right: 6px;
+    color: #102B53;
+}
+
+.search-container button {
+    background-color: #50698D;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.Book-now {
+    background: #4E7AB1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.Book-now:hover {
+    background: #7D9FC0;
+}
+
+/* About Section Layout */
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2rem;
+    padding: 3rem;
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 2rem;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* Sidebar */
+.sidebar ul {
+    background: #7D9FC0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    list-style-type: square;
+    color: white;
+}
+
+.sidebar ul li {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Content */
+.content h1 {
+    margin-bottom: 0.5rem;
+    color: #102B53;
+}
+
+.content p {
+    margin-bottom: 2rem;
+    color: #50698D;
+}
+
+/* Team Photo */
+.team-photo {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.team-photo img {
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Quote Section */
+.quote-section {
+    margin-top: 3rem;
+    background-color: #E7DCEB;
+    padding: 2rem;
+    border-left: 5px solid #4E7AB1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.quote-section blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #102B53;
+}
+
+.quote-section footer {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #50698D;
+}
+
+.quote-section img {
+    width: 120px;
+    border-radius: 10px;
+}
+
+.team-carousel {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(145deg, #4E7AB1, #7D9FC0);
+  border-radius: 20px;
+  margin: 5.5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.team-carousel h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.carousel-container {
+  overflow: hidden;
+  max-width: 80%;
+  margin: auto;
+}
+
+.carousel-slide {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.team-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.8rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  min-width: 100px;
+  transition: transform 0.3s;
+}
+
+.team-card:hover {
+  transform: scale(1.04);
+}
+
+.team-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.4rem;
+}
+
+.team-name {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.carousel-buttons button {
+  background-color: #102B53;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.footer {
+    background-color: #102B53;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+/* Social media icon styling */
+.icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}

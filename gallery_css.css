@@ -1,0 +1,146 @@
+:root {
+  --dark-blue: #102B53;
+  --mid-blue: #50698D;
+  --lavender: #CEB5D4;
+  --light-blue: #4E7AB1;
+  --sky-blue: #7D9FC0;
+}
+.gallery {
+    padding: 60px 10%;
+    background-color: #dbeafc;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery-item h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #00bfa5;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #102B53;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 60px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #CEB5D4;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #7D9FC0;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 6px 12px;
+    border-radius: 30px;
+    border: 1px solid #50698D;
+    background-color: #fff;
+    margin-right: 6px;
+    color: #102B53;
+}
+
+.search-container button {
+    background-color: #50698D;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.Book-now {
+    background: #4E7AB1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.Book-now:hover {
+    background: #7D9FC0;
+}
+
+/* Prevent content from hiding under navbar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #dbeafc;
+    color: #102B53;
+    line-height: 1.6;
+    padding-top: 90px; /* Space for fixed navbar */
+}
+
+.footer {
+    background-color: #102B53;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+/* Social media icon styling */
+.icon {
+  width: 40px; /* Set the size of the icons */
+  height: 40px; /* Ensure the icons are square */
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+

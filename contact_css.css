@@ -1,0 +1,265 @@
+/* General Reset and Color Scheme */
+:root {
+  --dark-blue: #102B53;
+  --medium-blue: #50698D;
+  --lavender: #CEB5D4;
+  --sky-blue: #4E7AB1;
+  --aqua: #7D9FC0;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Body */
+body {
+  background: #dbeafc;
+  color: #102B53;
+  line-height: 1.6;
+  padding-top: 90px;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--dark-blue);
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  width: 60px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--lavender);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: var(--aqua);
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--medium-blue);
+  background-color: var(--white);
+  margin-right: 10px;
+  color: var(--dark-blue);
+}
+
+.search-container button {
+  background-color: var(--medium-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.Book-now {
+  background: var(--sky-blue);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.Book-now:hover {
+  background: var(--aqua);
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 50px 20px 30px;
+  background-color: var(--lavender);
+  color: var(--dark-blue);
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Contact Section */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 30px;
+  justify-content: space-around;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.card {
+  background: var(--white);
+  border-left: 6px solid var(--aqua);
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: var(--sky-blue);
+}
+
+/* Contact Form */
+.form-map-container {
+  flex: 2;
+  min-width: 300px;
+}
+
+.contact-form {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.contact-form h2 {
+  margin-bottom: 10px;
+  color: var(--dark-blue);
+}
+
+.contact-form p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: var(--medium-blue);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--aqua);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.contact-form button {
+  background: var(--sky-blue);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background: var(--aqua);
+}
+
+/* Map */
+.map {
+  width: 100%;
+  border: 2px solid var(--lavender);
+  border-radius: 10px;
+}
+
+/* Gallery */
+.gallery {
+  padding: 60px 10%;
+  background-color: #dbeafc;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.gallery-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery-item h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #00bfa5;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  margin-top: 50px;
+}
+
+/* Social media icons */
+.icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+

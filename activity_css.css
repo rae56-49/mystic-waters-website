@@ -1,0 +1,209 @@
+:root {
+  --dark-blue: #102B53;
+  --mid-blue: #50698D;
+  --lavender: #CEB5D4;
+  --light-blue: #4E7AB1;
+  --sky-blue: #7D9FC0;
+}
+/* GENERAL STYLING */
+body {
+    margin: 0;
+    padding-top: 80px; /* Space for fixed navbar */
+    font-family: 'Segoe UI', sans-serif;
+    background: #dbeafc;
+    color: #102B53;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(to right, #102B53, #50698D);
+    color: #fff;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* PRICING SECTION */
+.pricing {
+    padding: 2rem;
+    background-color: #CEB5D4;
+    border-radius: 20px;
+    margin: 2rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pricing h2 {
+    text-align: center;
+    color: #102B53;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* TABLE STYLING */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+thead th {
+    background-color: #4E7AB1;
+    color: #fff;
+    font-size: 1rem;
+}
+
+tbody tr:hover {
+    background-color: #EAF3FB;
+}
+
+td:first-child {
+    font-weight: bold;
+    color: #102B53;
+}
+
+td[colspan="2"] {
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    background-color: #102B53;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+/* RESPONSIVE TABLE */
+@media screen and (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 1.5rem;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 1rem;
+        background-color: #fff;
+    }
+
+    td {
+        padding: 0.5rem;
+        text-align: right;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        text-align: left;
+        padding-left: 1rem;
+        font-weight: bold;
+        color: #50698D;
+    }
+}
+
+/* FIXED NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #102B53;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 60px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #CEB5D4;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #7D9FC0;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 6px 12px;
+    border-radius: 30px;
+    border: 1px solid #50698D;
+    background-color: #fff;
+    margin-right: 6px;
+    color: #102B53;
+}
+
+.search-container button {
+    background-color: #50698D;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.Book-now {
+    background: #4E7AB1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.Book-now:hover {
+    background: #7D9FC0;
+}
+
+/* SOCIAL MEDIA ICONS */
+.icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: transform 0.3s ease;
+}
+
+.icon:hover,
+.icon:focus {
+    transform: scale(1.1);
+    outline: none;
+}

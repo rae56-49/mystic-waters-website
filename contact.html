@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🌊 Contact ༄.</title>
+  <link rel="stylesheet" href="contact_css.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <a href="home.html">
+    <img src="mystic_logo_jpg.jpg" alt="Logo" class="logo" />
+  </a>
+  <ul>
+    <li><a href="home.html">🫧Home</a></li>
+    <li><a href="about.html">🫧About Us</a></li>
+    <li><a href="activity.html">🫧Activities & Services</a></li>
+    <li><a href="gallery.html">🫧Gallery</a></li>
+    <li><a href="booking.html">🫧Booking</a></li>
+    <li><a href="contact.html" class="active">🫧Contact Us</a></li>
+    <li><a href="safety.html">🫧Safety & FAQs</a></li>
+	<li><a href="menu.html">🫧Menu</a></li>
+  </ul>
+ 
+  <a href="booking.html" class="Book-now">Book With Us</a>
+</nav>
+
+<header class="header">
+  <h1>Contact Us</h1>
+  <p>Have a question or need help? We’re here to assist you with anything you need to make your adventure unforgettable!</p>
+</header>
+
+<section class="contact-section">
+  <div class="contact-info">
+    <div class="card"><strong>📞 Phone</strong><p>876-813-6201</p></div>
+    <div class="card"><strong>💬 WhatsApp</strong><p>876-542-7863</p></div>
+    <div class="card"><strong>✉️ Email</strong><p>mysticwaters@gmail.com</p></div>
+    <div class="card"><strong>🏬 Our Shop</strong><p>MysticWaters.online</p></div>
+  </div>
+
+  <div class="form-map-container">
+    <form id="contactForm" class="contact-form">
+      <h2>Get In Touch</h2>
+      <p>Send us a message and we’ll get back to you as soon as possible.</p>
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="subject" placeholder="Subject" />
+      <textarea id="message" placeholder="Message" required></textarea>
+      <button type="submit">Send Now</button>
+    </form>
+
+   <iframe class="map"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3794.4528623268835!2d-77.92621768561774!3d18.47721647325012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eda2a0e8e20c0d1%3A0x40f804b9d170bb6d!2sGloucester%20Ave%2C%20Montego%20Bay%2C%20Jamaica!5e0!3m2!1sen!2sjm!4v1714398025951!5m2!1sen!2sjm"
+  width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+  </div>
+</section>
+
+  <footer class="footer">
+  
+          <div class="social-media-icons">
+            <a href="https://www.youtube.com/" target="_blank">
+                <img src="yt.jpg" alt="YouTube" class="icon">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="insta1.jpg" alt="Instagram" class="icon">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+                <img src="fb.jpg" alt="FaceBook" class="icon">
+            </a>
+            <a href="https://mail.google.com/" target="_blank">
+                <img src="gmail.jpg" alt="Gmail" class="icon">
+            </a>
+        </div>
+    <div class="container">
+      <p>© 2025 Mystic Waters. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form from submitting the traditional way
+
+  // Get form values
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const subject = document.getElementById('subject').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  // Basic validation
+  if (!name || !email || !message) {
+    alert('Please fill in all required fields (Name, Email, and Message).');
+    return;
+  }
+
+  // Confirmation alert
+  alert(`Message Sent Successfully! 📩
+
+Name: ${name}
+Email: ${email}
+Subject: ${subject || 'No Subject'}
+Message: ${message}
+`);
+
+  // Optional: Reset the form after confirmation
+  document.getElementById('contactForm').reset();
+});
+</script>
+
+
+</body>
+  <audio controls autoplay>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+</html>
+

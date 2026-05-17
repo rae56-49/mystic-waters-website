@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌊 Booking ༄.</title>
+  <link rel="stylesheet" href="booking_css.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <a href="home.html">
+        <img src="mystic_logo_jpg.jpg" alt="Logo" class="logo">
+    </a>
+    <ul>
+        <li><a href="home.html">🫧Home</a></li>
+        <li><a href="about.html">🫧About Us</a></li>
+        <li><a href="activity.html">🫧Activities & Services</a></li>
+        <li><a href="gallery.html">🫧Gallery</a></li>
+        <li><a href="booking.html">🫧Booking</a></li>
+        <li><a href="contact.html">🫧Contact Us</a></li>
+        <li><a href="safety.html">🫧Safety & FAQs</a></li>
+		<li><a href="menu.html">🫧Menu</a></li>
+    </ul>
+    
+    <a href="booking.html" class="Book-now">Book With Us</a>
+</nav>
+
+<div class="container">
+  <div class="info-section">
+    <div class="info-card">
+      <p><strong>Prepared by:</strong><br>MIS 1</p>
+    </div>
+    <div class="info-card">
+      <p><strong>Contact:</strong><br>876-813-6201</p>
+    </div>
+    <div class="info-card">
+      <p><strong>Email:</strong><br>mysticwaters@gmail.com</p>
+    </div>
+    <div class="info-card">
+      <p><strong>Alternate Email:</strong><br>mysticinfo@gmail.com</p>
+    </div>
+	<div class="info-card">
+      <p><strong>❗All prices are in USD.❗</strong><br></p>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <h2>Book Your Activity</h2>
+    <form id="bookingForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="tel" id="phone" placeholder="Phone Number" required />
+      
+      <select id="activity" required>
+        <option value="">🪼 Select Activity 𖦹</option>
+        <option>Jet Skiing</option>
+        <option>Kayaking</option>
+        <option>Parasailing</option>
+        <option>Scuba Diving</option>
+        <option>Banana Boat</option>
+        <option>Clear Kayak</option>
+        <option>Photoshoot</option>
+        <option>Chill Water Bikes</option>
+        <option>Glass Bottom Boats</option>
+        <option>Hobie Sail</option>
+        <option>Knee Board</option>
+        <option>Snorkling</option>
+        <option>Speed Boat</option>
+        <option>Stand Up Paddle Board</option>
+        <option>Wake Board</option>
+        <option>Water Ski</option>
+      </select>
+	  
+<select id="durationType" required>
+  <option value="">🐚⋆ Select Duration ‧₊˚ ⛲️ </option>
+  <option value="standard">Standard</option>
+  <option value="extended">Extended</option>
+</select>
+
+
+      <input type="date" id="bookingDate" required />
+      <input type="number" id="participants" min="1" placeholder="Number of Participants" required />
+
+      <div class="checkboxes">
+        <label><input type="checkbox" value="Equipment Rental" /> Equipment Rental</label>
+        <label><input type="checkbox" value="Guided Tour" /> Guided Tour</label>
+        <label><input type="checkbox" value="Private Session" /> Private Session</label>
+      </div>
+
+      <!-- Total Cost Display -->
+      <div id="totalCost" style="margin-top: 15px; font-weight: bold;">Total Cost: $0</div>
+
+      <div class="buttons">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="social-media-icons">
+    <a href="https://www.youtube.com/" target="_blank">
+      <img src="yt.jpg" alt="YouTube" class="icon">
+    </a>
+    <a href="https://www.instagram.com" target="_blank">
+      <img src="insta1.jpg" alt="Instagram" class="icon">
+    </a>
+    <a href="https://www.facebook.com/" target="_blank">
+      <img src="fb.jpg" alt="Facebook" class="icon">
+    </a>
+    <a href="https://mail.google.com/" target="_blank">
+      <img src="gmail.jpg" alt="Gmail" class="icon">
+    </a>
+  </div>
+
+  <div class="footer-text">
+    <p>© 2025 Mystic Waters. All rights reserved.</p>
+  </div>
+</footer>
+
+  <audio controls autoplay>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+// Cost settings
+const activityPrices = {
+  "Jet Skiing": 100,
+  "Kayaking": 40,
+  "Parasailing": 120,
+  "Scuba Diving": 250,
+  "Banana Boat": 50,
+  "Clear Kayak": 60,
+  "Photoshoot": 80,
+  "Chill Water Bikes": 55,
+  "Glass Bottom Boats": 25,
+  "Hobie Sail": 70,
+  "Knee Board": 60,
+  "Snorkling": 50,
+  "Speed Boat": 150,
+  "Stand Up Paddle Board": 40,
+  "Wake Board": 80,
+  "Water Ski": 85
+};
+
+const extraCosts = {
+  "Equipment Rental": 15,
+  "Guided Tour": 25,
+  "Private Session": 30
+};
+
+function updateTotalCost() {
+  const activity = document.getElementById('activity').value;
+  const participants = parseInt(document.getElementById('participants').value) || 0;
+
+  if (!activity || participants <= 0) {
+    document.getElementById('totalCost').textContent = 'Total Cost: $0';
+    return;
+  }
+
+  const basePrice = activityPrices[activity] || 0;
+  let extrasTotal = 0;
+  document.querySelectorAll('.checkboxes input[type="checkbox"]:checked').forEach(checkbox => {
+    extrasTotal += extraCosts[checkbox.value] || 0;
+  });
+
+  const total = participants * (basePrice + extrasTotal);
+  document.getElementById('totalCost').textContent = `Total Cost: $${total}`;
+}
+
+// Event listeners
+document.getElementById('activity').addEventListener('change', updateTotalCost);
+document.getElementById('participants').addEventListener('input', updateTotalCost);
+document.querySelectorAll('.checkboxes input[type="checkbox"]').forEach(checkbox => {
+  checkbox.addEventListener('change', updateTotalCost);
+});
+
+// Handle form submission
+document.getElementById('bookingForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const activity = document.getElementById('activity').value;
+  const bookingDate = document.getElementById('bookingDate').value;
+  const participants = document.getElementById('participants').value;
+
+  const selectedOptions = [];
+  document.querySelectorAll('.checkboxes input[type="checkbox"]:checked').forEach(checkbox => {
+    selectedOptions.push(checkbox.value);
+  });
+
+  if (!name || !email || !phone || !activity || !bookingDate || !participants) {
+    alert('Please fill in all required fields.');
+    return;
+  }
+
+  const selectedDate = new Date(bookingDate);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  if (selectedDate < today) {
+    alert('Booking date must be today or a future date!');
+    return;
+  }
+
+  // Get total cost again
+  const basePrice = activityPrices[activity] || 0;
+  let extrasTotal = 0;
+  selectedOptions.forEach(opt => {
+    extrasTotal += extraCosts[opt] || 0;
+  });
+  const total = participants * (basePrice + extrasTotal);
+
+  const confirmationMessage = `
+Booking Confirmed! 🎉🩷
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Activity: ${activity}
+Booking Date: ${bookingDate}
+Number of Participants: ${participants}
+Additional Options: ${selectedOptions.length > 0 ? selectedOptions.join(', ') : 'None'}
+Total Cost: $${total} 
+`;
+
+  alert(confirmationMessage);
+});
+</script>
+</body>
+</html>
+

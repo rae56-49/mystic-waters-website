@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+:root {
+  --dark-blue: #102B53;
+  --mid-blue: #50698D;
+  --lavender: #CEB5D4;
+  --light-blue: #4E7AB1;
+  --sky-blue: #7D9FC0;
+}
+/* Reset & Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #7D9FC0;
+  color: #102B53;
+  padding-top: 90px;
+  line-height: 1.6;
+}
+
+/* Container Layout */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Header */
+header {
+  text-align: center;
+  background: linear-gradient(to right, #4E7AB1, #7D9FC0);
+  color: #fff;
+  padding: 20px 0;
+  border-radius: 20px 20px 0 0;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Content Section */
+.content {
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #102B53;
+  font-weight: 600;
+}
+
+/* Guidelines List */
+.guidelines ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.guidelines ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #7D9FC0;
+  color: #102B53;
+}
+
+/* FAQ Section */
+.faq-item {
+  background: #CEB5D4;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #50698D;
+}
+
+.faq-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #102B53;
+}
+
+.faq-item p {
+  color: #102B53;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #102B53;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  width: 60px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #CEB5D4;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #7D9FC0;
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #50698D;
+  background-color: #fff;
+  margin-right: 10px;
+  color: #102B53;
+}
+
+.search-container button {
+  background-color: #50698D;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+/* Call to Action */
+.Book-now {
+  background: #4E7AB1;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.Book-now:hover {
+  background: #7D9FC0;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--dark-blue);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Social media icon styling */
+.icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+.footer {
+  width: 100%;
+  background-color: var(--dark-blue);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+
